@@ -21,7 +21,6 @@ import createElement from '../../assets/lib/create-element.js';
 
 export default class UserTable {
     elem = null;
-    
     rows= [];
 
     constructor(rows) {
@@ -30,7 +29,6 @@ export default class UserTable {
       this.render();
     }
     
-    
     render() {
       this.elem = createElement(this.tableTemplate());
       
@@ -38,15 +36,10 @@ export default class UserTable {
       for (let b of buttons) {
         b.onclick = function(event) {
         event.target.closest("tr").remove();
-      }}
-
-      
-    
+        }
+      }
     }
-    
-    
-    
-    
+     
     tableTemplate() {
       return `
       <table>
@@ -71,6 +64,3 @@ export default class UserTable {
     }
   }
 
-
-// let table = new UserTable(rows);
-// document.body.appendChild(table.elem);
