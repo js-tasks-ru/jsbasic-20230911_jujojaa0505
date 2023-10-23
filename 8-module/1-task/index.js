@@ -39,7 +39,7 @@ export default class CartIcon {
   }
 
   updatePosition() {
-    // ваш код ...
+    
     if (document.documentElement.clientWidth <= 767) {
       Object.assign(this.elem.style, {
         position: '',
